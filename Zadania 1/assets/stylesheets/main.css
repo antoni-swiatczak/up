@@ -1,0 +1,109 @@
+:root {
+  --color: #fff;
+  --bg: #222;
+  --link: #f00;
+}
+
+body {
+  width: 100%;
+  margin: 0 !important;
+  background-color: var(--bg);
+  color: var(--color);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+header > img {
+  width: 50%;
+}
+
+nav {
+  width: 50%;
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+nav > ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+nav > ul > li {
+  font-size: 24px;
+}
+
+nav > ul > li {
+  margin-right: 64px;
+}
+
+nav > ul > li:last-child {
+  margin-right: 0px;
+}
+
+nav > ul > li > a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+main {
+  width: 50%;
+}
+
+main > table {
+  width: 100%;
+  margin-top: 16px;
+}
+
+main > table > thead, main > table > tbody {
+  width: 100%;
+}
+
+main > table > thead > tr, main > table > tbody > tr {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 8px;
+  justify-items: center;
+}
+
+#blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#blog > h1 > a {
+  color: var(--link);
+}
+
+#blog > p {
+  text-align: justify;
+}
+
+#paragraph > img {
+  margin-top: 16px;
+  width: 50%;
+  float: left;
+}
+
+#paragraph > p {
+  text-align: justify;
+}
+
+/* @media only screen and (max-width: 1280px) {
+  
+} */
