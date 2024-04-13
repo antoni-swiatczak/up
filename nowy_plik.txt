@@ -3,3 +3,5 @@ Konflikt-branch
 
 Konflikt-main
 main
+
+ZMINANA FORK
