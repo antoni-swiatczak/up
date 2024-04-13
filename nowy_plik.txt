@@ -1,1 +1,5 @@
+branch-to-merge
 Konflikt-branch
+
+Konflikt-main
+main
