@@ -1,0 +1,137 @@
+html, body, #container {
+  width: 100%;
+}
+
+body {
+  margin: 0 !important;
+  background-color: #808080;
+}
+
+* {
+  font-family: Calibri, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: #fff;
+  font-weight: bold;
+  margin: 8px 0 8px 0;
+  font-size: 32px;
+}
+
+p {
+  color: #000;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+nav {
+  width: 90%;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 16px;
+}
+
+nav > input {
+  border-radius: 4px;
+  width: calc(100% - 40px);
+  font-weight: bold;
+}
+
+nav > button {
+  width: 40px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #04788f;
+  border: none;
+  border-radius: 4px;
+}
+
+nav > button:hover {
+  cursor: pointer;
+}
+
+nav > button:hover > i {
+  color: lightblue;
+}
+
+nav > button > i {
+  font-size: 16px;
+  color: #f6d274;
+}
+
+main {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 16px;
+}
+
+.todo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  outline: 3px solid #04788f;
+  border-radius: 3px;
+}
+
+.todo-txt {
+  width: calc(100% - 52px);
+  overflow: auto;
+  color: #fff;
+  letter-spacing: .5px;
+  padding-left: 12px;
+  background-color: #4eb9cd;
+}
+
+.todo-txt:hover, .todo-txt:hover ~ .todo-btn {
+  cursor: pointer;
+  background-color: #04788f;
+}
+
+.todo-btn {
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4eb9cd;
+}
+
+.todo-txt, .todo-btn {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.todo-btn:hover {
+  cursor: pointer;
+  background-color: red;
+}
+
+.todo-btn > i {
+  color: #035f71;
+}
+
+.todo-btn:hover > i {
+  color: #fff;
+}
+
+.done {
+  color: #099626 !important;
+  background-color: #51df6f !important;
+}
