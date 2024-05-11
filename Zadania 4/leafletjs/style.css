@@ -1,0 +1,21 @@
+#map {
+  width: 100%;
+  height: 480px;
+}
+
+.popup {
+  border: none;
+  background-color: red;
+  color: white;
+  font-size: 16px;
+}
+
+.popup:hover {
+  cursor: pointer;
+  background-color: black;
+}
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  border: 3px solid red;
+  background-color: yellow;
+}
