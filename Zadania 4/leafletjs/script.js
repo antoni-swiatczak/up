@@ -59,3 +59,107 @@ function copyToClipboard(e) {
 }
  
 map.on("click", copyToClipboard);
+
+const inputs = document.getElementsByClassName("add-input");
+
+for (let i = 0; i < 7; i++) {
+  inputs[i].addEventListener("click", () => {
+    inputs[i].classList.remove("wrong-val");
+  })
+}
+
+let counter = 0;
+
+document.getElementById("add-btn").addEventListener("click", () => {
+  let tab = new Array(7);
+  let good = true;
+  for (let i = 0; i < 7; i++) {
+    switch (i) {
+      case 0:
+        {
+          if (isNaN(inputs[0].value) || inputs[0].value.length == 0) {
+            good = false;
+            inputs[0].classList.add("wrong-val");
+          } else {
+            tab[0] = inputs[0].value;
+          }
+        }
+        break;
+      case 1:
+        {
+          if (isNaN(inputs[1].value) || inputs[1].value.length == 0) {
+            good = false;
+            inputs[1].classList.add("wrong-val");
+          } else {
+            tab[1] = inputs[1].value;
+          }
+        }
+        break;
+      case 2:
+        {
+          if (inputs[2].value.length == 0) {
+            good = false;
+            inputs[2].classList.add("wrong-val");
+          } else {
+            tab[2] = inputs[2].value;
+          }
+        }
+        break;
+      case 3:
+        {
+          if (inputs[3].value.length == 0) {
+            good = false;
+            inputs[3].classList.add("wrong-val");
+          } else {
+            tab[3] = inputs[3].value;
+          }
+        }
+        break;
+      case 4:
+        {
+          if (inputs[4].value.length == 0) {
+            good = false;
+            inputs[4].classList.add("wrong-val");
+          } else {
+            tab[4] = inputs[4].value;
+          }
+        }
+        break;
+      case 5:
+        {
+          if (inputs[5].value.length == 0) {
+            good = false;
+            inputs[5].classList.add("wrong-val");
+          } else {
+            tab[5] = inputs[5].value;
+          }
+        }
+        break;
+      case 6:
+        {
+          if (inputs[6].value.length == 0) {
+            good = false;
+            inputs[6].classList.add("wrong-val");
+          } else {
+            tab[6] = inputs[6].value;
+          }
+        }
+        break;
+    }
+  }
+  if (good) {
+    // document.getElementById("add-form").reset();
+    let m = L.marker([tab[0], tab[1]]).addTo(map);
+    let p = L.popup({
+      content: `
+        <h3>${tab[2]}</h3>
+        <button style="background-color: ${tab[5]}; color: ${tab[6]}">${tab[3]}</button>
+      `,
+      className: `popup${counter}`
+    });
+    m.bindPopup(p).openPopup();
+    document.getElementsByClassName(`popup${counter}`)[0].firstChild.style.backgroundColor = `${tab[4]}`;
+    document.getElementsByClassName(`popup${counter}`)[0].querySelector('.leaflet-popup-tip').style.backgroundColor = `${tab[4]}`;
+    counter++;
+  }
+});

@@ -16,6 +16,10 @@
 }
 
 .leaflet-popup-content-wrapper, .leaflet-popup-tip {
-  border: 3px solid red;
   background-color: yellow;
+}
+
+.wrong-val {
+  border-left: 3px solid red;
+
 }
