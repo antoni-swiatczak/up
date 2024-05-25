@@ -8,10 +8,6 @@ const Router = require("@koa/router");
 const app = new Koa();
 const router = new Router();
 
-router.get("/", (ctx) => {
-  ctx.body = `GO TO: http://127.0.0.1:${PORT}/hello OR http://127.0.0.1:${PORT}/goodbye`;
-});
-
 router.get("/hello", (ctx) => {
   ctx.body = "Hello, world";
 });
